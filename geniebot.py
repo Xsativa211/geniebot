@@ -16,16 +16,27 @@ Clientdiscord = discord.Client()
     
 @client.event
 async def on_ready():
-    await client.change_presence(game=Game(name='Spotify with Tatsumaki', type = 2))
+    await client.change_presence(game=Game(name='Prontera BGM', type = 2))
     print('Codes are working perfectly fine! you may use it now!') 
 
 @client.event
 async def on_message(message):
-    if message.content == '@everyone':
-        await client.send_message(message.channel,'@here Orayt rock and roll boom boom!')
-    if ('@everyone') in message.content:
+    if message.content == 'genie':
+        await client.send_message(message.channel,'Hehehe busy po leave message nalang')
+    if ('genie') in message.content:
        await client.delete_message(message)
-       
+    if message.content == 'Genie':
+        await client.send_message(message.channel,'Hehehe busy po leave message nalang')
+    if ('Genie') in message.content:
+       await client.delete_message(message)
+    if message.content == 'tammy':
+        await client.send_message(message.channel,'Hehehe busy po leave message nalang')
+    if ('tammy') in message.content:
+       await client.delete_message(message)    
+    if message.content == 'Tammy':
+        await client.send_message(message.channel,'Hehehe busy po leave message nalang')
+    if ('Tammy') in message.content:
+       await client.delete_message(message)       
 
         
 client.run(str(os.environ.get('TOKEN')))
