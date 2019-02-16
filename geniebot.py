@@ -4,6 +4,8 @@ from discord.ext import commands
 import asyncio
 import time
 import random
+import requests
+import os
 from discord import Game
 
 
