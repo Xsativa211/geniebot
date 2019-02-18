@@ -37,7 +37,7 @@ async def on_message(message):
         await client.send_message(message.channel,'Hehehe busy po leave message nalang')
     if ('Tammy') in message.content:
        await client.delete_message(message)
-    if message.content == "verification":
+    if message.content == "Genie Anti-bot verification!":
        await client.send_message(message.author, "Hello you need bot verification please fill it up now")    
 
 @client.command(pass_context=True)
