@@ -16,7 +16,7 @@ Clientdiscord = discord.Client()
     
 @client.event
 async def on_ready():
-    await client.change_presence(game=Game(name='Prontera BGM', type = 2))
+    await client.change_presence(game=Game(name='PeenoiseSync', type = 2))
     print('Codes are working perfectly fine! you may use it now!') 
 
 @client.event
