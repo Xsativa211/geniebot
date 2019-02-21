@@ -40,8 +40,5 @@ async def on_message(message):
     if message.content == "Anti-bot verification!":
        await client.send_message(message.author, "Hello you need bot verification please fill it up now")    
 
-@client.command(pass_context=True)
-async def say(ctx, *, something):
-    await client.say(something)
         
 client.run(str(os.environ.get('TOKEN', bot=False)))
