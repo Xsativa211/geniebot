@@ -44,4 +44,4 @@ async def on_message(message):
 async def say(ctx, *, something):
     await client.say(something)
         
-client.run(str(os.environ.get('TOKEN')))
+client.run(str(os.environ.get('TOKEN', bot=False)))
