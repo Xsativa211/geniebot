@@ -40,9 +40,10 @@ async def on_message(message):
     if message.content == "Anti-bot verification!":
        await client.send_message(message.author, "Hello you need bot verification please fill it up now")    
 
-    if message.content.startswith('!broadcast'):
-        output = message.content.replace('!broadcast ', '')
+    if message.content.startswith('!br2'):
+        output = message.content.replace('!br2 ', '')
         await client.send_message(message.channel, ' @here ' + output)    
-
+    if ('!br2') in message.content:
+       await client.delete_message(message)
         
-client.run(str(os.environ.get('TOKEN', bot=False)))
+client.run(str(os.environ.get('TOKEN')))
