@@ -37,8 +37,8 @@ async def on_message(message):
         await client.send_message(message.channel,'Hehehe busy po leave message nalang')
     if ('Tammy') in message.content:
        await client.delete_message(message)
-    if message.content == "Anti-bot verification!":
-       await client.send_message(message.author, "Hello you need bot verification please fill it up now")    
+    if message.content == "!botcheck":
+       await client.send_message(message.author, "I am active :)")    
 
     if message.content.startswith('!br'):
         output = message.content.replace('!br ', '')
