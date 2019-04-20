@@ -16,17 +16,17 @@ Clientdiscord = discord.Client()
     
 @client.event
 async def on_ready():
-    await client.change_presence(game=Game(name='Project Zeta Ragnarok Online',))
+    await client.change_presence(game=Game(name='Project ZetaRO',))
     print('Codes are working perfectly fine! you may use it now!') 
 
 @client.event
 async def on_message(message):  
-    if message.content == 'Tammy':
-        await client.send_message(message.channel,'Hehehe busy po leave message nalang')
-    if ('Tammy') in message.content:
+    if message.content == '!update':
+        await client.send_message(message.channel,'We have new server update! \n \n \n \n \n \n \nhttps://tenor.com/view/happy-im-so-happy-happiness-joy-excited-gif-7525568')
+    if ('!update') in message.content:
        await client.delete_message(message)
     if message.content == "!botcheck":
-       await client.send_message(message.author, "I am active :)")    
+       await client.send_message(message.author, "Commands will be released in the future :)")    
 
     if message.content.startswith('!br'):
         output = message.content.replace('!br ', '')
