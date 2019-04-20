@@ -25,7 +25,11 @@ async def on_message(message):
        await client.send_message(message.author, "Get the latest update and events from our Official ZetaRO Facebook Page and Group \n[Facebook Community Group]\nhttps://www.facebook.com/groups/315935882497689/\n[Facebook Page]\nhttps://www.facebook.com/Project-Zeta-911786119007085/ ")
     if ('!official') in message.content:
        await client.delete_message(message) 
-
+    if message.content == '!invitation':
+        await client.send_message(message.channel,'Official Discord Server Invitation Link https://discord.gg/AVznxUU')    
+    if ('!official') in message.content:
+       await client.delete_message(message) 
+        
     if message.content.startswith('!update'):
         output = message.content.replace('!update ', '')
         await client.send_message(message.channel, 'Hello Zeta Players we have a new update! \n ' + output)
