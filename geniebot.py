@@ -30,7 +30,7 @@ async def on_message(message):
 
     if message.content.startswith('!br'):
         output = message.content.replace('!br ', '')
-        await client.send_message(message.channel, 'Hello we have new server update! \n ' + output)
+        await client.send_message(message.channel, 'Hello Zeta Players we have a new update! \n ' + output)
     if ('!br') in message.content:
        await client.delete_message(message)       
         
