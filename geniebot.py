@@ -22,13 +22,19 @@ async def on_ready():
 @client.event
 async def on_message(message):  
     if message.content == "!official":
-       await client.send_message(message.author, "Get the latest update and events from our Official ZetaRO Facebook Page and Group \n[Facebook Community Group]\nhttps://www.facebook.com/groups/315935882497689/\n[Facebook Page]\nhttps://www.facebook.com/Project-Zeta-911786119007085/ ")
+       await client.send_message(message.author, "Get the latest updates and events from our Official ZetaRO Facebook Page and Group \n[Facebook Community Group]\nhttps://www.facebook.com/groups/315935882497689/\n[Facebook Page]\nhttps://www.facebook.com/Project-Zeta-911786119007085/ ")
     if ('!official') in message.content:
        await client.delete_message(message) 
     if message.content == '!invitation':
         await client.send_message(message.channel,'Official Discord Server Invitation Link https://discord.gg/AVznxUU')    
     if ('!official') in message.content:
        await client.delete_message(message) 
+    
+        embed=discord.Embed(title="Information", description="View all of the bot commands")
+        embed.set_author(name="Zeta Bot Commands")
+        embed.add_field(name=!official, value=Official Facebook Page and Community Group Link, inline=False)
+        embed.add_field(name=!invitation, value=To view Project Zeta Invitation Link, inline=True)
+       await self.bot.say(embed=embed)
         
     if message.content.startswith('!update'):
         output = message.content.replace('!update ', '')
