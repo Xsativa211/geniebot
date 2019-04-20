@@ -25,7 +25,7 @@ async def on_message(message):
         await client.send_message(message.channel,'We have new server update! \n \n \n \n \n \n \nhttps://tenor.com/view/happy-im-so-happy-happiness-joy-excited-gif-7525568')
     if ('!update') in message.content:
        await client.delete_message(message)
-    if message.content == "!botcheck":
+    if message.content == "!commands":
        await client.send_message(message.author, "Commands will be released in the future :)")    
 
     if message.content.startswith('!br'):
