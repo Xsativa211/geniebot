@@ -41,7 +41,7 @@ async def on_message(message):
     if message.content.startswith("!zhelp"):
         em = discord.Embed(title="Zeta Bot Commands", description="Shows you the bot commands available for you!", colour=0x551d6d)
         em.set_thumbnail(url=message.server.icon_url)
-        em.add_field(name="!official", value="Gives you the official Facebook Page and Community Page.", inline=False)
+        em.add_field(name="!official", value="Gives you the official link Facebook Page and Community Group.", inline=False)
         em.add_field(name="!invite", value="Gives you the Discord Server invitation.", inline=False)
         em.add_field(name="!guide", value="To Be Announce", inline=False)
         await client.send_message(message.channel, embed=em)    
