@@ -21,8 +21,8 @@ async def on_ready():
 
 @client.event
 async def on_message(message):
-    if message.content == '!zeta':
-        await client.send_message(author,'Hello! Welcome to Zeta Ragnarok Online')
+    if message.content == "!help":
+       await client.send_message(message.author, "Hello player this is our discord server commands") 
     if message.content == '!test':
         await client.send_message(message.channel,'Hello this is just a test from zetaRO')
     if ('!test') in message.content:
