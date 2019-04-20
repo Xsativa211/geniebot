@@ -28,8 +28,8 @@ async def on_message(message):
     if message.content == "!commands":
        await client.send_message(message.author, "Commands will be released in the future :)")
     if message.content == "!commands1":
-    embed=discord.Embed(title="ZetaRO Discord Server Commands", description="Hello this is just a test one two three four and this is our commands ", color=0xb92f2f)
-    embed.set_footer(text="aw")
+        embed=discord.Embed(title="ZetaRO Discord Server Commands", description="Hello this is just a test one two three four and this is our commands ", color=0xb92f2f)
+        embed.set_footer(text="aw")
         await self.bot.say(embed=embed)
 
     if message.content.startswith('!br'):
