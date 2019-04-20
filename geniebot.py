@@ -16,33 +16,21 @@ Clientdiscord = discord.Client()
     
 @client.event
 async def on_ready():
-    await client.change_presence(game=Game(name='PeenoiseSync', type = 2))
+    await client.change_presence(game=Game(name='Project Zeta',))
     print('Codes are working perfectly fine! you may use it now!') 
 
 @client.event
 async def on_message(message):
-    if message.content == 'genie':
-        await client.send_message(message.channel,'Hehehe busy po leave message nalang')
-    if ('genie') in message.content:
-       await client.delete_message(message)
-    if message.content == 'Genie':
-        await client.send_message(message.channel,'Hehehe busy po leave message nalang')
-    if ('Genie') in message.content:
-       await client.delete_message(message)
-    if message.content == 'tammy':
-        await client.send_message(message.channel,'Hehehe busy po leave message nalang')
-    if ('tammy') in message.content:
-       await client.delete_message(message)    
-    if message.content == 'Tammy':
-        await client.send_message(message.channel,'Hehehe busy po leave message nalang')
-    if ('Tammy') in message.content:
-       await client.delete_message(message)
-    if message.content == "!botcheck":
-       await client.send_message(message.author, "I am active :)")    
+    if message.content == '!zeta':
+        await client.send_message.user('Hello there!')
+    if message.content == '!test':
+        await client.send_message(message.channel,'Hello this is just a test from zetaRO')
+    if ('!test') in message.content:
+       await client.delete_message(message)     
 
     if message.content.startswith('!br'):
         output = message.content.replace('!br ', '')
-        await client.send_message(message.channel, 'Hello! Everyone we have new Server Update! \n ' + output)
+        await client.send_message(message.channel, 'Hello Everyone! Everyone we have new Server Update! \n ' + output)
     if ('!br') in message.content:
        await client.delete_message(message)
     
