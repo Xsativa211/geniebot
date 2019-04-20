@@ -21,15 +21,13 @@ async def on_ready():
 
 @client.event
 async def on_message(message):  
-    if message.content == '!update':
-        await client.send_message(message.channel,'We have new server update! \n \n \n \n \n \n \nhttps://tenor.com/view/happy-im-so-happy-happiness-joy-excited-gif-7525568')
-    if ('!update') in message.content:
-       await client.delete_message(message)
-    if message.content == "!commands":
-       await client.send_message(message.author, "Commands will be released in the future :)")
+    if message.content == "!official":
+       await client.send_message(message.author, "Get The latest update from our Official ZetaRO Facebook Page and Group \n https://www.facebook.com/groups/315935882497689/ \n https://www.facebook.com/groups/315935882497689/")
+    if ('!official') in message.content:
+       await client.delete_message(message) 
 
-    if message.content.startswith('!br'):
-        output = message.content.replace('!br ', '')
+    if message.content.startswith('!update'):
+        output = message.content.replace('!update ', '')
         await client.send_message(message.channel, 'Hello Zeta Players we have a new update! \n ' + output)
     if ('!br') in message.content:
        await client.delete_message(message)       
