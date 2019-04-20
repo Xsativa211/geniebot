@@ -27,10 +27,20 @@ async def on_message(message):
        await client.delete_message(message)
     if message.content == "!commands":
        await client.send_message(message.author, "Commands will be released in the future :)")
-    if message.content == "!commands1":
-        embed=discord.Embed(title="ZetaRO Discord Server Commands", description="Hello this is just a test one two three four and this is our commands ", color=0xb92f2f)
-        embed.set_footer(text="aw")
-        await self.bot.say(embed=embed)
+
+@bot.command()
+async def info(ctx):
+       embed = discord.Embed(title="ZetaRO Bot", description="#ZetaRO", color=0xeee657)
+
+        # give info about you here
+       embed.add_field(name="Author", value="ZetaRO ")
+
+        # Shows the number of servers the bot is member of.
+       embed.add_field(name="Server count", value=f"{len(bot.guilds)}")
+
+        # give users a link to invite thsi bot to their server
+       embed.add_field(name="Invite", value="[Invite link](<insert your OAuth invitation link here>)")
+       await ctx.send(embed=embed)
 
     if message.content.startswith('!br'):
         output = message.content.replace('!br ', '')
