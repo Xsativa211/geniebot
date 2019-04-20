@@ -48,7 +48,7 @@ async def on_message(message):
     
     if message.content.startswith('!bc'):
         output = message.content.replace('!bc ', '')
-        await client.send_message(message.channel, 'OYOYOYOYOYOY ' + output)
+        await client.send_message(message.channel, 'Greetings Players! we have new discord server update ' + output)
     if ('!bc') in message.content:
        await client.delete_message(message)     
         
