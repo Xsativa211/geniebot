@@ -22,7 +22,7 @@ async def on_ready():
 @client.event
 async def on_message(message):  
     if message.content == "!official":
-       await client.send_message(message.author, "Get the latest update and events from our Official ZetaRO Facebook Page and Group \n [Facebook Community Group] \nhttps://www.facebook.com/groups/315935882497689/ \n[Facebook Page]\n https://www.facebook.com/Project-Zeta-911786119007085/ ")
+       await client.send_message(message.author, "Get the latest update and events from our Official ZetaRO Facebook Page and Group \n[Facebook Community Group]\nhttps://www.facebook.com/groups/315935882497689/\n[Facebook Page]\nhttps://www.facebook.com/Project-Zeta-911786119007085/ ")
     if ('!official') in message.content:
        await client.delete_message(message) 
 
