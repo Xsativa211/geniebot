@@ -16,7 +16,6 @@ Clientdiscord = discord.Client()
     
 @client.event
 async def on_ready():
-    if message.content == '!zeta':
         await client.change_presence(game=Game(name='Project Zeta',))
     print('Codes are working perfectly fine! you may use it now!') 
 
