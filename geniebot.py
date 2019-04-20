@@ -28,7 +28,9 @@ async def on_message(message):
     if message.content == '!invitation':
         await client.send_message(message.channel,'Official Discord Server Invitation Link https://discord.gg/AVznxUU')    
     if ('!official') in message.content:
-       await client.delete_message(message) 
+       await client.delete_message(message)
+    if ('invitation') in message.content:
+        await client.delete_message(message)
         
     if message.content.startswith('!update'):
         output = message.content.replace('!update ', '')
