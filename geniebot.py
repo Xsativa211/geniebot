@@ -28,12 +28,13 @@ async def on_message(message):
     if message.content == "!commands":
        await client.send_message(message.author, "Commands will be released in the future :)")
 
-@bot.command()
-async def info(ctx):
+@client.event()
+async def on_message(message):
+    if message.content == "info":
        embed = discord.Embed(title="ZetaRO Bot", description="#ZetaRO", color=0xeee657)
 
         # give info about you here
-       embed.add_field(name="Author", value="ZetaRO ")
+       embed.add_field(name="Author", value="ZetaRO")
 
         # Shows the number of servers the bot is member of.
        embed.add_field(name="Server count", value=f"{len(bot.guilds)}")
