@@ -32,18 +32,20 @@ async def on_message(message):
     if ('invitation') in message.content:
         await client.delete_message(message)     
         
-    if message.content.startswith('!update'):
-        output = message.content.replace('!update ', '')
+    if message.content.startswith('!zbotupdate'):
+        output = message.content.replace('!zbotupdate ', '')
         await client.send_message(message.channel, 'Hello Zeta Players we have a new update! \n ' + output)
-    if ('!br') in message.content:
+    if ('!zbotupdate') in message.content:
        await client.delete_message(message)
     
     if message.content.startswith("!zhelp"):
-        em = discord.Embed(title="Zeta Bot Commands", description="Shows you the bot commands available for you!", colour=0x551d6d)
+        em = discord.Embed(title="Zeta Bot Commands", description="Show you the bot commands available for you!", colour=0xcc780a)
         em.set_thumbnail(url=message.server.icon_url)
         em.add_field(name="!official", value="Gives you the official link Facebook Page and Community Group.", inline=False)
         em.add_field(name="!invite", value="Gives you the Discord Server invitation.", inline=False)
-        em.add_field(name="!guide", value="To Be Announce", inline=False)
+        em.add_field(name="!guide", value="To Be Announce!", inline=False)
+        em.add_field(name="!forums", value="Link to be updated soon!", inline=False)
+        em.set_footer(text="Server Discord and Bot Owner Jhake#4303")
         await client.send_message(message.channel, embed=em)    
         
 client.run(str(os.environ.get('TOKEN')))
