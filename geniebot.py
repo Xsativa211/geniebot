@@ -37,6 +37,12 @@ async def on_message(message):
         await client.send_message(message.channel, 'Hello Zeta Players we have a new update! \n ' + output)
     if ('!zbotupdate') in message.content:
        await client.delete_message(message)
+
+    if message.content.startswith('!hbc'):
+        output = message.content.replace('!hbc ', '')
+        await client.send_message(message.channel, output + 'Hello Zeta Players we have a new update! \n ')
+    if ('!hbc') in message.content:
+       await client.delete_message(message)    
     
     if message.content.startswith("!zhelp"):
         em = discord.Embed(title="Zeta Bot Commands", description="Show you the bot commands available for you!", colour=0xcc780a)
