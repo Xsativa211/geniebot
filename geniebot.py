@@ -46,19 +46,20 @@ async def on_message(message):
     if ('!zbotupdate') in message.content:
        await client.delete_message(message)
     
-    if message.content.startswith('!hbc'):
-        for user in message.mentions:
-            msg = 'Hello Everyone! Helper {} is currently active in the game and discord!\nIf you have a questions on how to start from the server feel free to send us a message via @request.\nAll @requests from newbies will be prioritize. so please wait for me to respond on your requests\n\nThank you!'.format(user.mention)
-            await client.send_message(message.channel, msg)
+    
     if message.content.startswith('!helper'):
         for user in message.mentions:
             msg = ' Hello {} If you have a question look for people who have the role "Support Team" or user with the violet name\nThey can help you regarding on your concerns and questions! or leave us a message at #request channel '.format(user.mention)
             await client.send_message(message.channel, msg)            
-    if ('!hbc') in message.content:
-       await client.delete_message(message)
     if ('!helper') in message.content:
        await client.delete_message(message)
-    
+
+
+    if message.content == '!hbctam':
+        await client.send_message(message.author,'Hello <@!262712309040807947> is currently active in game and discord!\nSend her a message if you have a questions\n```Her In Game Name Helper is <your in game name>')    
+    if ('!hbctam')
+        await client.delete_message(message)
+
     
     if message.content.startswith("!zhelp"):
         em = discord.Embed(title="Zeta Bot Commands", description="Show you the bot commands available for you!", colour=0xcc780a)
