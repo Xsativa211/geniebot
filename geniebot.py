@@ -31,9 +31,7 @@ async def on_message(message):
     if message.content == '!invitation':
         await client.send_message(message.channel,'Official Discord Server Invitation Link https://discord.gg/AVznxUU')
     if message.content == '@request':
-        await client.send_message(message.author,'@request is a command to send a Private Message from the staff in the game, please use the #request channel on discord if you have a concern')
-
-        
+        await client.send_message(message.author,'@request is a command to send a Private Message from the staff in the game, please use the #request channel on discord if you have a concern')     
         
     if ('!official') in message.content:
        await client.delete_message(message)
@@ -44,14 +42,7 @@ async def on_message(message):
         output = message.content.replace('!zbotupdate ', '')
         await client.send_message(message.channel, 'Hello Zeta Players we have a new update! \n ' + output)
     if ('!zbotupdate') in message.content:
-       await client.delete_message(message)
-
-    if message.content.startswith('B>'):
-        output = message.content.replace('B>', '')
-        await client.send_message(message.channel, 'is buying .. ' + output)
-    if message.content.startswith('S>'):
-        output = message.content.replace('S>', '')
-        await client.send_message(message.channel, 'is selling .. ' + output)        
+       await client.delete_message(message)      
     
     
     if message.content.startswith('!helper'):
@@ -64,6 +55,10 @@ async def on_message(message):
 
     if message.content == '!hbctam':
         await client.send_message(message.channel,'Hello <@!285843163585839107> is currently active in game and discord!\nSend her a message if you have a questions\n```Her In Game Name Helper is <your in game name>```')    
+    if ('!hbctam') in message.content:
+        await client.delete_message(message)
+    if message.content == '!hbcjoe':
+        await client.send_message(message.channel,'Hello <@!324825272916639744> is currently active in game and discord!\nSend her a message if you have a questions\n```Her In Game Name Helper is <your in game name>```')    
     if ('!hbctam') in message.content:
         await client.delete_message(message)  
 
