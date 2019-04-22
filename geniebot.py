@@ -47,10 +47,10 @@ async def on_message(message):
        await client.delete_message(message)
 
     if message.content.startswith('B>'):
-        output = message.content.replace('B> ', '')
+        output = message.content.replace('B>', '')
         await client.send_message(message.channel, 'is buying .. ' + output)
     if message.content.startswith('S>'):
-        output = message.content.replace('B> ', '')
+        output = message.content.replace('S>', '')
         await client.send_message(message.channel, 'is selling .. ' + output)        
     
     
