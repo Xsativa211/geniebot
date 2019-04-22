@@ -32,9 +32,7 @@ async def on_message(message):
         await client.send_message(message.channel,'Official Discord Server Invitation Link https://discord.gg/AVznxUU')
     if message.content == '@request':
         await client.send_message(message.author,'@request is a command to send a Private Message from the staff in the game, please use the #request channel on discord if you have a concern')
-   
-    if ('@request') in message.content:
-       await client.delete_message(message)
+
     if ('!official') in message.content:
        await client.delete_message(message)
     if ('invitation') in message.content:
