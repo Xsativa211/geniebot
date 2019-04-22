@@ -33,6 +33,8 @@ async def on_message(message):
     if message.content == '@request':
         await client.send_message(message.author,'@request is a command to send a Private Message from the staff in the game, please use the #request channel on discord if you have a concern')
 
+        
+        
     if ('!official') in message.content:
        await client.delete_message(message)
     if ('invitation') in message.content:
@@ -43,6 +45,13 @@ async def on_message(message):
         await client.send_message(message.channel, 'Hello Zeta Players we have a new update! \n ' + output)
     if ('!zbotupdate') in message.content:
        await client.delete_message(message)
+
+    if message.content.startswith('B>'):
+        output = message.content.replace('B> ', '')
+        await client.send_message(message.channel, 'is buying .. ' + output)
+    if message.content.startswith('S>'):
+        output = message.content.replace('B> ', '')
+        await client.send_message(message.channel, 'is selling .. ' + output)        
     
     
     if message.content.startswith('!helper'):
