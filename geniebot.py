@@ -17,7 +17,6 @@ Clientdiscord = discord.Client()
 @client.event
 async def on_ready():
     await client.change_presence(game=Game(name='Project ZetaRO',))
-    await client.change_presence(game=discord.Game(name="Project ZetaRO"), status=discord.Status("Idle"))
     print('Codes are working perfectly fine! you may use it now!') 
 
 @client.event
