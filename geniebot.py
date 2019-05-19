@@ -54,7 +54,7 @@ async def on_message(message):
 
 
     if message.content == '!hbctam':
-        await client.send_message(message.channel,'Hello <@!285843163585839107> is currently active in game and discord!\nSend her a message if you have a questions\n```Her In Game Name Helper is <your in game name>```')    
+        await client.send_message(message.channel,'Hello <@!285843163585839107> is currently active in game and discord!\nSend her a message if you have a questions\n```Her In Game Name Helper is Tofu```')    
     if ('!hbctam') in message.content:
         await client.delete_message(message)
     if message.content == '!hbcjoe':
