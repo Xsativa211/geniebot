@@ -32,10 +32,12 @@ async def on_message(message):
 ### Auto Delete Message Section ###
     if ('!official') in message.content:
        await client.delete_message(message)
-    if ('invitation') in message.content:
+    if ('!invitation') in message.content:
         await client.delete_message(message)
-    if ('mainhall') in message.content:
-        await client.delete_message(message)         
+    if ('!mainhall') in message.content:
+        await client.delete_message(message)
+    if ('!zetahelp') in message.content:
+        await client.delete_message(message)        
         
     if message.content.startswith('!zbotupdate'):
         output = message.content.replace('!zbotupdate ', '')
