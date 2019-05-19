@@ -61,7 +61,7 @@ async def on_message(message):
         await client.delete_message(message)  
 
 ### DISCORD COMMANDS ###    
-    if message.content.startswith("!help"):
+    if message.content.startswith("!zetahelp"):
         em = discord.Embed(title="Zeta Bot Commands", description="Show you the bot commands available for you!", colour=0xcc780a)
         em.set_thumbnail(url=message.server.icon_url)
         em.set_author(name= message.author.nick)
