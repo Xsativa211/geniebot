@@ -84,6 +84,6 @@ async def on_message(message):
         em.add_field(name="Voting Staff and Activity Shop NPC", value="@warp prt_in 281 168", inline=False)
         em.set_footer(text="Content Create By <@!285843163585839107>/ Discord,Ragnarok Server Owner Jhake#4303")
         for member in message.server:
-            await client.send_message(member, embed=em)		  
+        await client.send_message(member, embed=em)		  
 
 client.run(str(os.environ.get('TOKEN')))
