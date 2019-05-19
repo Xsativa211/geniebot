@@ -82,8 +82,7 @@ async def on_message(message):
         em.add_field(name="Daily Rewards & Hourly Rewards NPCs", value="warp prt_in 248 163", inline=False)
         em.add_field(name="Dressing Coach and Costume Maker", value="warp prt_in 284 131", inline=False)
         em.add_field(name="Voting Staff and Activity Shop NPC", value="warp prt_in 281 168", inline=False)
-        em.set_footer(text="Content Create By Genie#7376 == Discord,Ragnarok Server Owner Jhake#4303")
-        for member in message.server:
+        em.set_footer(text="Content Create By Genie#7376, Discord,Ragnarok Server Owner Jhake#4303")
         await client.send_message(member, embed=em)	        
 
 client.run(str(os.environ.get('TOKEN')))
