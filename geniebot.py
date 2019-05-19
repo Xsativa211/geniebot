@@ -79,9 +79,9 @@ async def on_message(message):
         em = discord.Embed(title="Prontera Main Hall Building", description="@warp prontera 167 167", colour=0xcc780a)
         em.set_thumbnail(url=message.server.icon_url)
         em.set_author(name= message.author.nick)
-        em.add_field(name="Daily Rewards & Hourly Rewards NPCs", value="@warp prt_in 248 163", inline=False)
-        em.add_field(name="Dressing Coach and Costume Maker", value="@warp prt_in 284 131", inline=False)
-        em.add_field(name="Voting Staff and Activity Shop NPC", value="@warp prt_in 281 168", inline=False)
+        em.add_field(name="Daily Rewards & Hourly Rewards NPCs", value="warp prt_in 248 163", inline=False)
+        em.add_field(name="Dressing Coach and Costume Maker", value="warp prt_in 284 131", inline=False)
+        em.add_field(name="Voting Staff and Activity Shop NPC", value="warp prt_in 281 168", inline=False)
         em.set_footer(text="Content Create By <@!285843163585839107>/ Discord,Ragnarok Server Owner Jhake#4303")
         for member in message.server:
         await client.send_message(member, embed=em)		  
