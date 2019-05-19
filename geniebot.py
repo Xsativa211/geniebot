@@ -37,7 +37,7 @@ async def on_message(message):
     if ('!mainhall') in message.content:
         await client.delete_message(message)
     if ('!zetahelp') in message.content:
-        await client.delete_message(message)        
+        await client.delete_message(message)         
         
     if message.content.startswith('!zbotupdate'):
         output = message.content.replace('!zbotupdate ', '')
@@ -92,8 +92,8 @@ async def on_message(message):
         em.add_field(name="Facebook Page", value="Facebook Page", inline=False)
         em.add_field(name="ZetaRO Community Forum", value="http://zeta-ro.com/forum/", inline=False)
         em.add_field(name="ZetaRO Website", value="http://zeta-ro.com/panel/", inline=False)
-        em.add_field(name"Server Information", value="http://zeta-ro.com/panel/?module=pages&action=server_info", inline=False)
+        em.add_field(name="Server Information", value="http://zeta-ro.com/panel/?module=pages&action=server_info", inline=False)
         em.set_footer(text="Content Create By: Staff Team & Discord,Ragnarok Server Owner Jhake#4303")
-        await client.send_message(message.author, embed=em)	        
+        await client.send_message(message.author, embed=em)         
 
 client.run(str(os.environ.get('TOKEN')))
