@@ -89,7 +89,7 @@ async def on_message(message):
         em.set_thumbnail(url=message.server.icon_url)
         em.set_author(name= message.author.nick)
         em.add_field(name="Facebook Group", value="https://www.facebook.com/groups/315935882497689/", inline=False)
-        em.add_field(name="Facebook Page", value="Facebook Page", inline=False)
+        em.add_field(name="Facebook Page", value="https://web.facebook.com/Project-Zeta-911786119007085/", inline=False)
         em.add_field(name="ZetaRO Community Forum", value="http://zeta-ro.com/forum/", inline=False)
         em.add_field(name="ZetaRO Website", value="http://zeta-ro.com/panel/", inline=False)
         em.add_field(name="Server Information", value="http://zeta-ro.com/panel/?module=pages&action=server_info", inline=False)
