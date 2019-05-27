@@ -68,7 +68,7 @@ async def on_message(message):
         em.set_thumbnail(url=message.server.icon_url)
         em.set_author(name= message.author.nick)
         em.add_field(name="!official", value="Gives you the official link of ZetaRO Forums,Website,Facebook Page & Group", inline=False)
-        em.add_field(name="!invite", value="Instantly give you discord invitation", inline=False)
+        em.add_field(name="!invitation", value="Instantly give you discord invitation", inline=False)
         em.add_field(name="!guide", value="To Be Announce!", inline=False)
         em.add_field(name="@request", value="Send you the usage of the command", inline=False)        
         em.set_footer(text="Server Discord and Bot Owner Jhake#4303")
