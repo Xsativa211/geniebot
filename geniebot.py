@@ -28,6 +28,7 @@ async def on_message(message):
         await client.send_message(message.channel,'Official Discord Server Invitation Link https://discord.gg/AVznxUU')
     if message.content == '@request':
         await client.send_message(message.author,'@request is a command to send a Private Message from the staff in the game, please message us via Direct Message or Look for us in the game for your concerns.')     
+
 ### Auto Delete Message Section ###
     if ('!official') in message.content:
        await client.delete_message(message)
@@ -53,11 +54,11 @@ async def on_message(message):
 
 
     if message.content == '!hbctam':
-        await client.send_message(message.channel,'Hello <@!285843163585839107> is currently active in game and discord!\nSend her a message if you have a questions\n```Her In Game Name  is Tofu```')    
+        await client.send_message(message.channel,'Hello <@!285843163585839107> is currently active in game and discord!\nSend her a message if you have a questions\n```Her In Game Name Helper is Tofu```')    
     if ('!hbctam') in message.content:
         await client.delete_message(message)
     if message.content == '!hbcvox':
-        await client.send_message(message.channel,'Hello <@!324825272916639744> is currently active in game and discord!\nSend him a message if you have a questions\n```His In Game Name is Vox Populi```')    
+        await client.send_message(message.channel,'Hello <@!324825272916639744> is currently active in game and discord!\nSend him a message if you have a questions\n```His In Game Name Helper is Vox Populi```')    
     if ('!hbcvox') in message.content:
         await client.delete_message(message)  
 
