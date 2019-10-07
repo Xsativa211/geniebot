@@ -56,7 +56,7 @@ async def on_message(message):
         await client.delete_message(message)        
     if message.content.startswith("!vyactive"):
         em = discord.Embed(title="SirVyChua", description="Live Game Streamer", colour=0xcc780a)
-        em.set_thumbnail(url=message.author.icon_url)
+        em.set_thumbnail(url=message.server.icon_url)
         em.set_author(name= message.author.nick)
         em.add_field(name="Facebook Page", value="https://www.facebook.com/sirvychua", inline=False)
         em.add_field(name="Games", value="Fortnite | Apex Legends | Destiny 2 | Ragnarok Online", inline=False)    
@@ -86,6 +86,7 @@ async def on_message(message):
         em.add_field(name="Voting Staff and Activity Shop NPC", value="@warp prt_in 281 168", inline=False)
         em.set_footer(text="Content Create By: Staff Team & Discord,Ragnarok Server Owner Jhake#4303")
         await client.send_message(message.author, embed=em)
+        
 ### Forum | Panel | Facebook Page and Group Link ###
     if message.content.startswith("!official"):
         em = discord.Embed(title="ZetaRO Official Links", description="Forum | Panel | Facebook Page and Group Link", colour=0xcc780a)
