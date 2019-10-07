@@ -51,10 +51,18 @@ async def on_message(message):
         await client.send_message(message.channel,'Hello <@!285843163585839107> is currently active in game and discord!\nSend her a message if you have a questions\n```Her In Game Name Helper is Tofu```')    
     if ('!hbctam') in message.content:
         await client.delete_message(message)
-    if message.content == '!vyactive':
-        await client.send_message(message.channel,'Hello <@185791106326331392> is now streaming online! \nhttps://www.facebook.com/sirvychua/videos/470951460157307/\nPlease Subscribe or Like if you support vychua!')    
     if ('!vyactive') in message.content:
         await client.delete_message(message)        
+    if message.content.startswith("!vyactive"):
+        em = discord.Embed(title="SirVyChua", description="Live Game Streamer", colour=0xcc780a)
+        em.set_thumbnail(url=message.server.icon_url)
+        em.set_author(name= message.author.nick)
+        em.add_field(name="Facebook Page", value="https://www.facebook.com/sirvychua", inline=False)
+        em.add_field(name="Games", value="Fortnite | Apex Legends | Destiny 2 | Ragnarok Online", inline=False)    
+        em.add_field(name="Please Subscribe!", value="If you want more exciting streams!", inline=False)           
+        em.set_footer(text="Server Discord and Bot Owner Jhake#4303")
+        await client.send_message(message.channel, embed=em)     
+        await client.send_message(message.channel,'Hello <@!185791106326331392> is currently Live on Facebook!\nSubscribe and support Vychua :)\nhttps://www.facebook.com/pg/sirvychua/videos/?ref=page_internal\n@everyone')    
 
 
 ### DISCORD COMMANDS ###    
