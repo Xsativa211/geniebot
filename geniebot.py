@@ -55,7 +55,7 @@ async def on_message(message):
     if ('!vyactive') in message.content:
         await client.delete_message(message)        
     if message.content.startswith("!vyactive"):
-        await client.send_message(message.channel,'Hello <@!185791106326331392> is currently Live on Facebook!\nSubscribe and support Vychua :)\nhttps://www.facebook.com/pg/sirvychua/videos/?ref=page_internal\n@everyone')        
+        await client.send_message(message.channel,'Hello <@!185791106326331392> is currently Live on Facebook!\nSubscribe and support Vychua :)\nhttps://www.facebook.com/pg/sirvychua/videos/?ref=page_internal\n@here')        
         em = discord.Embed(title="SirVyChua", description="Live Game Streamer", colour=0xcc780a)
         em.set_thumbnail(url=message.author.icon_url)
         em.set_author(name= message.author.nick)
