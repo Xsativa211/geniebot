@@ -63,7 +63,7 @@ async def on_message(message):
         em.add_field(name="Please Subscribe!", value="If you want more exciting streams!", inline=False)
         em.add_field(name="Do you want to be a ZetaRO Streamer? click  this link!", value="https://zeta-ro.com/forum/index.php?/topic/133-zeta-ro-streamer-program/&tab=comments#comment-693", inline=False)           
         em.set_footer(text="Server Discord and Bot Owner Jhake#4303")
-        await client.send_message(message.author, embed=em)    
+        await client.send_message(message.channel, embed=em)    
 
 ### DISCORD COMMANDS ###    
     if message.content.startswith("!zetahelp"):
