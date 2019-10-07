@@ -54,6 +54,7 @@ async def on_message(message):
     if ('!vyactive') in message.content:
         await client.delete_message(message)        
     if message.content.startswith("!vyactive"):
+        await client.send_message(message.channel,'Hello <@!185791106326331392> is currently Live on Facebook!\nSubscribe and support Vychua :)\nhttps://www.facebook.com/pg/sirvychua/videos/?ref=page_internal\n@everyone')        
         em = discord.Embed(title="SirVyChua", description="Live Game Streamer", colour=0xcc780a)
         em.set_thumbnail(url=message.server.icon_url)
         em.set_author(name= message.author.nick)
@@ -62,8 +63,6 @@ async def on_message(message):
         em.add_field(name="Please Subscribe!", value="If you want more exciting streams!", inline=False)           
         em.set_footer(text="Server Discord and Bot Owner Jhake#4303")
         await client.send_message(message.channel, embed=em)     
-        await client.send_message(message.channel,'Hello <@!185791106326331392> is currently Live on Facebook!\nSubscribe and support Vychua :)\nhttps://www.facebook.com/pg/sirvychua/videos/?ref=page_internal\n@everyone')    
-
 
 ### DISCORD COMMANDS ###    
     if message.content.startswith("!zetahelp"):
