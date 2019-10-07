@@ -51,10 +51,11 @@ async def on_message(message):
         await client.send_message(message.channel,'Hello <@!285843163585839107> is currently active in game and discord!\nSend her a message if you have a questions\n```Her In Game Name Helper is Tofu```')    
     if ('!hbctam') in message.content:
         await client.delete_message(message)
-    if message.content == '!hbclovely':
-        await client.send_message(message.channel,'Hello <@!324825272916639744> is currently active in game and discord!\nSend him a message if you have a questions\n```Her In Game Name Helper is Lovely```')    
-    if ('!hbcvox') in message.content:
-        await client.delete_message(message)  
+    if message.content == '!vyactive':
+        await client.send_message(message.channel,'Hello <@185791106326331392> is now streaming online! \nhttps://www.facebook.com/sirvychua/videos/470951460157307/\nPlease Subscribe or Like if you support vychua!')    
+    if ('!vyactive') in message.content:
+        await client.delete_message(message)        
+
 
 ### DISCORD COMMANDS ###    
     if message.content.startswith("!zetahelp"):
