@@ -10,7 +10,7 @@ from discord import Game
 
 
 Client = discord.client
-client = commands.Bot(command_prefix = '#')
+client = commands.Bot(command_prefix = '!')
 Clientdiscord = discord.Client()
 
     
@@ -33,7 +33,7 @@ async def on_message(message):
     if ('!zetahelp') in message.content:
         await client.delete_message(message)         
         
-    if message.content.startswith('#announcement'):
+    if message.content.startswith('!announcement'):
         output = message.content.replace('#announcement ', '')
         await client.send_message(message.channel, 'Hello we have an ANNOUNCEMENT! \n ' + output)
     if ('#announcement') in message.content:
@@ -47,19 +47,8 @@ async def on_message(message):
        await client.delete_message(message)
    
 
-### DISCORD COMMANDS ###    
-    if message.content.startswith("!zetahelp"):
-        em = discord.Embed(title="Zeta Bot Commands", description="Show you the bot commands available for you!", colour=0xcc780a)
-        em.set_thumbnail(url=message.server.icon_url)
-        em.set_author(name= message.author.nick)
-        em.add_field(name="!official", value="Gives you the official link of ZetaRO Forums,Website,Facebook Page & Group", inline=False)
-        em.add_field(name="!invitation", value="Instantly give you discord invitation", inline=False)
-        em.add_field(name="!guide", value="To Be Announce!", inline=False)
-        em.add_field(name="@request", value="Send you the usage of the command", inline=False)        
-        em.set_footer(text="Server Discord and Bot Owner Jhake#4303")
-        await client.send_message(message.channel, embed=em)    
 ### MAIN HALL ###
-    if message.content.startswith("#daily"):
+    if message.content.startswith("!daily"):
         em = discord.Embed(title="SOAR Daily Link", description="Can View the daily linked used when voting", colour=0xcc780a)
         em.set_thumbnail(url=message.server.icon_url)
         em.set_author(name= message.author.nick)
