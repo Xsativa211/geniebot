@@ -42,12 +42,14 @@ async def on_message(message):
         await client.send_message(message.channel, embed=em)
         
 ### Discord Direct Message ###
-    if message.content.startswith("!daily2"):
-        em = discord.Embed(title="ZetaRO Official Links", description="Forum | Panel | Facebook Page and Group Link", colour=0xcc780a)
+    if message.content.startswith("!daily"):
+        em = discord.Embed(title="SOAR Daily Link", description="Can View the daily linked used when voting", colour=0xcc780a)
         em.set_thumbnail(url=message.server.icon_url)
         em.set_author(name= message.author.nick)
-        em.add_field(name="Facebook Group", value="https://www.facebook.com/groups/315935882497689/", inline=False)
-        em.set_footer(text="Content Create By: Staff Team & Discord,Ragnarok Server Owner Jhake#4303")
-        await client.send_message(message.author, embed=em)          
+        em.add_field(name="Submisstion Form", value="https://bit.ly/2wAP1rb", inline=False)
+        em.add_field(name="Check if your account is Shadowbanned or Suspended", value="https://bit.ly/2UCyPxw", inline=False)
+        em.add_field(name="View Everyones Earnings", value="https://bit.ly/2UwqZFI", inline=False)
+        em.set_footer(text="Content Create By: SOAR Staff Team")
+        await client.send_message(message.channel, embed=em)        
     
 client.run(str(os.environ.get('TOKEN')))
