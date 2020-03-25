@@ -16,7 +16,7 @@ Clientdiscord = discord.Client()
     
 @client.event
 async def on_ready():
-    await client.change_presence(game=Game(name='Zeta Ragnarok Online : Gepard Shield',))
+    await client.change_presence(game=Game(name='Soar',))
     print('Codes are working perfectly fine! you may use it now!') 
 
 @client.event
@@ -24,19 +24,18 @@ async def on_message(message):
     if message.author == client.user:
         return
 ### Auto Delete Message Section ###
-    if ('!official') in message.content:
-       await client.delete_message(message)
-    if ('!invitation') in message.content:
-        await client.delete_message(message)
-    if ('!mainhall') in message.content:
-        await client.delete_message(message)
-    if ('!zetahelp') in message.content:
-        await client.delete_message(message)         
+    if ('!here') in message.content:
+       await client.delete_message(message)      
+    if ('!sipon') in message.content:
+       await client.delete_message(message)  
+    if ('!help') in message.content:
+       await client.delete_message(message)     
+    
         
-    if message.content.startswith('!zbotupdate'):
-        output = message.content.replace('!zbotupdate ', '')
-        await client.send_message(message.channel, 'Hello Zeta Players we have a new update! \n ' + output)
-    if ('!zbotupdate') in message.content:
+    if message.content.startswith('!here'):
+        output = message.content.replace('!here ', '')
+        await client.send_message(message.channel, 'Hello Everyone We Have an Announcement! \n ' + output)
+    if ('!here') in message.content:
        await client.delete_message(message)      
       
     if message.content.startswith('!helper'):
@@ -46,27 +45,11 @@ async def on_message(message):
     if ('!helper') in message.content:
        await client.delete_message(message)
 
-
-    if message.content == '!hbctam':
-        await client.send_message(message.channel,'Hello <@!185791106326331392> is currently active in game and discord!\nSend her a message if you have a questions\n```Her In Game Name Helper is Tofu```')    
+    if message.content == '!sipon':
+        await client.send_message(message.channel,'Hello <@!285843163585839107> is currently offline!\nHe will check your message once he gets baack on!')    
     if ('!hbctam') in message.content:
         await client.delete_message(message)
-### Vychua's Live Stream Message ### 
-    if ('!vyactive') in message.content:
-        await client.delete_message(message)        
-    if message.content.startswith("!vyactive"):
-        em = discord.Embed(title="SirVyChua", description="Live Game Streamer", colour=0xcc780a)
-        em.set_thumbnail(url=message.server.icon_url)
-        em.set_author(name= message.author.nick)
-        em.add_field(name="Facebook Page", value="https://www.facebook.com/sirvychua", inline=False)
-        em.add_field(name="Games", value="Fortnite | Apex Legends | Destiny 2 | Ragnarok Online", inline=False)    
-        em.add_field(name="Please Subscribe!", value="If you want more exciting streams!", inline=False)
-        em.add_field(name="Do you want to be a ZetaRO Streamer? click  this link!", value="https://zeta-ro.com/forum/index.php?/topic/133-zeta-ro-streamer-program/&tab=comments#comment-693", inline=False)           
-        em.set_footer(text="Server Discord and Bot Owner Jhake#4303")
-        await client.send_message(message.channel, embed=em)
-        await client.send_message(message.channel,'Hello <@!285843163585839107> is currently Live on Facebook!\nSubscribe and support Vychua :)\n@here')    
-        
-
+               
 ### DISCORD COMMANDS ###    
     if message.content.startswith("!zetahelp"):
         em = discord.Embed(title="Zeta Bot Commands", description="Show you the bot commands available for you!", colour=0xcc780a)
@@ -78,30 +61,18 @@ async def on_message(message):
         em.add_field(name="@request", value="Send you the usage of the command", inline=False)        
         em.set_footer(text="Server Discord and Bot Owner Jhake#4303")
         await client.send_message(message.channel, embed=em)    
-### MAIN HALL ###
-    if message.content.startswith("!mainhall"):
+        
+### SOAR Main Links ###
+    if message.content.startswith("!help"):
         em = discord.Embed(title="Prontera Main Hall Building", description="@warp prontera 167 167", colour=0xcc780a)
         em.set_thumbnail(url=message.server.icon_url)
         em.set_author(name= message.author.nick)
-        em.add_field(name="Daily Rewards & Hourly Rewards NPCs", value="@warp prt_in 248 163", inline=False)
-        em.add_field(name="Dressing Coach and Costume Maker", value="@warp prt_in 284 131", inline=False)
-        em.add_field(name="Voting Staff and Activity Shop NPC", value="@warp prt_in 281 168", inline=False)
-        em.set_footer(text="Content Create By: Staff Team & Discord,Ragnarok Server Owner Jhake#4303")
+        em.add_field(name="Submission Form", value="https://docs.google.com/forms/d/e/1FAIpQLSeGdlxg5wUY5BfaZk4MlSN6uz76WIwckwh9A1SBTuV__VOxxA/viewform?pli=1", inline=False)
+        em.add_field(name="To Check Your Reddit Status", value="https://nullprogram.com/am-i-shadowbanned/?#magboul2331", inline=False)
+        em.add_field(name="View Your Earnings", value="https://docs.google.com/spreadsheets/d/1tkPDblhdd9DC3PfdcoI9ZmQzcXdOuV-_5_uzUcvq4VA/edit#gid=0", inline=False)
+        em.set_footer(text="Content Create By: Soar Staff Team!")
         await client.send_message(message.author, embed=em)
-        
-### Forum | Panel | Facebook Page and Group Link ###
-    if message.content.startswith("!official"):
-        em = discord.Embed(title="ZetaRO Official Links", description="Forum | Panel | Facebook Page and Group Link", colour=0xcc780a)
-        em.set_thumbnail(url=message.server.icon_url)
-        em.set_author(name= message.author.nick)
-        em.add_field(name="Facebook Group", value="https://www.facebook.com/groups/315935882497689/", inline=False)
-        em.add_field(name="Facebook Page", value="https://web.facebook.com/Project-Zeta-911786119007085/", inline=False)
-        em.add_field(name="ZetaRO Community Forum", value="http://zeta-ro.com/forum/", inline=False)
-        em.add_field(name="ZetaRO Website", value="http://zeta-ro.com/panel/", inline=False)
-        em.add_field(name="Server Information", value="http://zeta-ro.com/panel/?module=pages&action=server_info", inline=False)
-        em.set_footer(text="Content Create By: Staff Team & Discord,Ragnarok Server Owner Jhake#4303")
-        await client.send_message(message.author, embed=em)          
-    
+             
     if message.content == '!invitation':
         await client.send_message(message.channel,'Official Discord Server Invitation Link https://discord.gg/AVznxUU')
     if message.content == '@request':
