@@ -16,7 +16,7 @@ Clientdiscord = discord.Client()
     
 @client.event
 async def on_ready():
-    await client.change_presence(game=Game(name='Soar',))
+    await client.change_presence(game=Game(name='SOAR!!',))
     print('Codes are working perfectly fine! you may use it now!') 
 
 @client.event
@@ -24,18 +24,19 @@ async def on_message(message):
     if message.author == client.user:
         return
 ### Auto Delete Message Section ###
-    if ('!here') in message.content:
-       await client.delete_message(message)      
-    if ('!sipon') in message.content:
-       await client.delete_message(message)  
-    if ('!help') in message.content:
-       await client.delete_message(message)     
-    
+    if ('!official') in message.content:
+       await client.delete_message(message)
+    if ('!invitation') in message.content:
+        await client.delete_message(message)
+    if ('#daily') in message.content:
+        await client.delete_message(message)
+    if ('!zetahelp') in message.content:
+        await client.delete_message(message)         
         
-    if message.content.startswith('!here'):
-        output = message.content.replace('!here ', '')
-        await client.send_message(message.channel, 'Hello Everyone We Have an Announcement! \n ' + output)
-    if ('!here') in message.content:
+    if message.content.startswith('#announcement'):
+        output = message.content.replace('#announcement ', '')
+        await client.send_message(message.channel, 'Hello we have an ANNOUNCEMENT! \n ' + output)
+    if ('#announcement') in message.content:
        await client.delete_message(message)      
       
     if message.content.startswith('!helper'):
@@ -44,12 +45,8 @@ async def on_message(message):
             await client.send_message(message.channel, msg)            
     if ('!helper') in message.content:
        await client.delete_message(message)
+   
 
-    if message.content == '!sipon':
-        await client.send_message(message.channel,'Hello <@!285843163585839107> is currently offline!\nHe will check your message once he gets baack on!')    
-    if ('!hbctam') in message.content:
-        await client.delete_message(message)
-               
 ### DISCORD COMMANDS ###    
     if message.content.startswith("!zetahelp"):
         em = discord.Embed(title="Zeta Bot Commands", description="Show you the bot commands available for you!", colour=0xcc780a)
@@ -61,22 +58,33 @@ async def on_message(message):
         em.add_field(name="@request", value="Send you the usage of the command", inline=False)        
         em.set_footer(text="Server Discord and Bot Owner Jhake#4303")
         await client.send_message(message.channel, embed=em)    
-        
-### SOAR Main Links ###
-    if message.content.startswith("!help"):
-        em = discord.Embed(title="Prontera Main Hall Building", description="@warp prontera 167 167", colour=0xcc780a)
+### MAIN HALL ###
+    if message.content.startswith("#daily"):
+        em = discord.Embed(title="SOAR Daily Link", description="Can View the daily linked used when voting", colour=0xcc780a)
         em.set_thumbnail(url=message.server.icon_url)
         em.set_author(name= message.author.nick)
-        em.add_field(name="Submission Form", value="https://docs.google.com/forms/d/e/1FAIpQLSeGdlxg5wUY5BfaZk4MlSN6uz76WIwckwh9A1SBTuV__VOxxA/viewform?pli=1", inline=False)
-        em.add_field(name="To Check Your Reddit Status", value="https://nullprogram.com/am-i-shadowbanned/?#magboul2331", inline=False)
-        em.add_field(name="View Your Earnings", value="https://docs.google.com/spreadsheets/d/1tkPDblhdd9DC3PfdcoI9ZmQzcXdOuV-_5_uzUcvq4VA/edit#gid=0", inline=False)
-        em.set_footer(text="Content Create By: Soar Staff Team!")
+        em.add_field(name="Submisstion Form", value="shorturl.at/axN08", inline=False)
+        em.add_field(name="Check if your account is Shadowbanned or Suspended", value="shorturl.at/MVY06", inline=False)
+        em.add_field(name="View Everyones Earnings", value="shorturl.at/klyGM", inline=False)
+        em.set_footer(text="Content Create By: SOAR Staff Team")
         await client.send_message(message.author, embed=em)
-             
+        
+### Forum | Panel | Facebook Page and Group Link ###
+    if message.content.startswith("!official"):
+        em = discord.Embed(title="ZetaRO Official Links", description="Forum | Panel | Facebook Page and Group Link", colour=0xcc780a)
+        em.set_thumbnail(url=message.server.icon_url)
+        em.set_author(name= message.author.nick)
+        em.add_field(name="Facebook Group", value="https://www.facebook.com/groups/315935882497689/", inline=False)
+        em.add_field(name="Facebook Page", value="https://web.facebook.com/Project-Zeta-911786119007085/", inline=False)
+        em.add_field(name="ZetaRO Community Forum", value="http://zeta-ro.com/forum/", inline=False)
+        em.add_field(name="ZetaRO Website", value="http://zeta-ro.com/panel/", inline=False)
+        em.add_field(name="Server Information", value="http://zeta-ro.com/panel/?module=pages&action=server_info", inline=False)
+        em.set_footer(text="Content Create By: Staff Team & Discord,Ragnarok Server Owner Jhake#4303")
+        await client.send_message(message.author, embed=em)          
+    
     if message.content == '!invitation':
         await client.send_message(message.channel,'Official Discord Server Invitation Link https://discord.gg/AVznxUU')
     if message.content == '@request':
         await client.send_message(message.author,'@request is a command to send a Private Message from the staff in the game, please message us via #support or Look for us in the game for your concerns.')     
    
-
 client.run(str(os.environ.get('TOKEN')))
