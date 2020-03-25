@@ -13,41 +13,24 @@ Client = discord.client
 client = commands.Bot(command_prefix = '!')
 Clientdiscord = discord.Client()
 
-    
 @client.event
 async def on_ready():
-    await client.change_presence(game=Game(name='SOAR!!',))
+    await client.change_presence(game=Game(name='SOAR',))
     print('Codes are working perfectly fine! you may use it now!') 
 
 @client.event
-async def on_message(message):  
-    if message.author == client.user:
-        return
-### Auto Delete Message Section ###
-    if ('!official') in message.content:
-       await client.delete_message(message)
-    if ('!invitation') in message.content:
-        await client.delete_message(message)
-    if ('#daily') in message.content:
-        await client.delete_message(message)
-    if ('!zetahelp') in message.content:
-        await client.delete_message(message)         
-        
-    if message.content.startswith('!announcement'):
-        output = message.content.replace('#announcement ', '')
-        await client.send_message(message.channel, 'Hello we have an ANNOUNCEMENT! \n ' + output)
-    if ('#announcement') in message.content:
-       await client.delete_message(message)      
-      
-    if message.content.startswith('!helper'):
-        for user in message.mentions:
-            msg = ' Hello {} If you have a question look for people who have the role "Support Team" or user with the violet name\nThey can help you regarding on your concerns and questions! or leave us a message at #request channel '.format(user.mention)
-            await client.send_message(message.channel, msg)            
-    if ('!helper') in message.content:
-       await client.delete_message(message)
-   
+async def on_message(message):
+    if message.content == '!link':
+       await client.send_message(message.channel,'Discord Invitation link\nhttps://discord.me/genocideguild')
 
-### MAIN HALL ###
+### Auto Delete Message Section ###
+    if ('!daily') in message.content:
+       await client.delete_message(message)
+    if ('!daily2') in message.content:
+       await client.delete_message(message)    
+    
+    
+### channel Message ###
     if message.content.startswith("!daily"):
         em = discord.Embed(title="SOAR Daily Link", description="Can View the daily linked used when voting", colour=0xcc780a)
         em.set_thumbnail(url=message.server.icon_url)
@@ -58,8 +41,8 @@ async def on_message(message):
         em.set_footer(text="Content Create By: SOAR Staff Team")
         await client.send_message(message.channel, embed=em)
         
-### Forum | Panel | Facebook Page and Group Link ###
-    if message.content.startswith("!official"):
+### Discord Direct Message ###
+    if message.content.startswith("!daily2"):
         em = discord.Embed(title="ZetaRO Official Links", description="Forum | Panel | Facebook Page and Group Link", colour=0xcc780a)
         em.set_thumbnail(url=message.server.icon_url)
         em.set_author(name= message.author.nick)
@@ -67,9 +50,4 @@ async def on_message(message):
         em.set_footer(text="Content Create By: Staff Team & Discord,Ragnarok Server Owner Jhake#4303")
         await client.send_message(message.author, embed=em)          
     
-    if message.content == '!invitation':
-        await client.send_message(message.channel,'Official Discord Server Invitation Link https://discord.gg/AVznxUU')
-    if message.content == '@request':
-        await client.send_message(message.author,'@request is a command to send a Private Message from the staff in the game, please message us via #support or Look for us in the game for your concerns.')     
-   
 client.run(str(os.environ.get('TOKEN')))
