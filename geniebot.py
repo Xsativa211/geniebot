@@ -10,7 +10,7 @@ from discord import Game
 
 
 Client = discord.client
-client = commands.Bot(command_prefix = '!')
+client = commands.Bot(command_prefix = '#')
 Clientdiscord = discord.Client()
 
     
@@ -63,11 +63,11 @@ async def on_message(message):
         em = discord.Embed(title="SOAR Daily Link", description="Can View the daily linked used when voting", colour=0xcc780a)
         em.set_thumbnail(url=message.server.icon_url)
         em.set_author(name= message.author.nick)
-        em.add_field(name="Submisstion Form", value="shorturl.at/axN08", inline=False)
-        em.add_field(name="Check if your account is Shadowbanned or Suspended", value="shorturl.at/MVY06", inline=False)
-        em.add_field(name="View Everyones Earnings", value="shorturl.at/klyGM", inline=False)
+        em.add_field(name="Submisstion Form", value="https://bit.ly/2wAP1rb", inline=False)
+        em.add_field(name="Check if your account is Shadowbanned or Suspended", value="https://bit.ly/2UCyPxw", inline=False)
+        em.add_field(name="View Everyones Earnings", value="https://bit.ly/2UwqZFI", inline=False)
         em.set_footer(text="Content Create By: SOAR Staff Team")
-        await client.send_message(message.author, embed=em)
+        await client.send_message(message.channel, embed=em)
         
 ### Forum | Panel | Facebook Page and Group Link ###
     if message.content.startswith("!official"):
@@ -75,10 +75,6 @@ async def on_message(message):
         em.set_thumbnail(url=message.server.icon_url)
         em.set_author(name= message.author.nick)
         em.add_field(name="Facebook Group", value="https://www.facebook.com/groups/315935882497689/", inline=False)
-        em.add_field(name="Facebook Page", value="https://web.facebook.com/Project-Zeta-911786119007085/", inline=False)
-        em.add_field(name="ZetaRO Community Forum", value="http://zeta-ro.com/forum/", inline=False)
-        em.add_field(name="ZetaRO Website", value="http://zeta-ro.com/panel/", inline=False)
-        em.add_field(name="Server Information", value="http://zeta-ro.com/panel/?module=pages&action=server_info", inline=False)
         em.set_footer(text="Content Create By: Staff Team & Discord,Ragnarok Server Owner Jhake#4303")
         await client.send_message(message.author, embed=em)          
     
